@@ -10,7 +10,7 @@ export default function Header() {
             <Search />
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="#" className="bell-dot">
                         <img src="/bell.svg" alt="bell" width={30} height={30} />
                     </a>
                 </li>
