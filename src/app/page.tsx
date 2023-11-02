@@ -14,19 +14,15 @@ export default function Home() {
   }
   return (
     <main>
-      <aside className={isMenuOpen ? 'aside-open' : 'aside-close'}>
+      <aside className={isMenuOpen ? 'aside-close' : 'aside-open'}>
+        <div className='close-btn' onClick={toggleClass}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m7 7l10 10M7 17L17 7" /></svg>
+        </div>
         <SideMenu />
       </aside>
       <div className='right-content'>
-        <Header />
+        <Header ontoggleClass={toggleClass} />
         <Landing />
-        {!isMenuOpen &&
-          <div className="menu-toggle" onClick={toggleClass}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        }
       </div>
     </main >
   )
