@@ -1,6 +1,6 @@
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/.pnpm/next@14.0.0_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/.pnpm/next@14.0.0_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/.pnpm/next@14.0.0_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/.pnpm/next@14.0.0_react-dom@18.2.0_react@18.2.0_sass@1.69.5/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/page.scss ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/page.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @charset "UTF-8";
 .button {
   background-color: rgba(164, 85, 10, 0.9);
@@ -25,6 +25,7 @@ main {
   height: auto;
   justify-content: center;
   margin: auto;
+  overflow: hidden;
 }
 main aside {
   transition: all 1s;
@@ -90,8 +91,13 @@ main aside .filter-section .filter-option .filter-option-header .collapse-icon {
   position: relative;
   left: 5px;
 }
+main aside .filter-section .filter-option .filter-option-header .collapse-icon .rotate-180 {
+  transform: rotate(0);
+}
 main aside .filter-section .filter-option .filter-option-header .collapse-icon svg {
+  transform: rotate(180deg);
   width: 15px;
+  transition: 0.5s;
 }
 main aside .filter-section .filter-option .collapse {
   height: 0;
@@ -218,19 +224,23 @@ main aside .filter-section input[type=range]::-moz-range-thumb {
 main .right-content {
   width: 100%;
 }
-main .right-content .landing {
-  padding: 40px;
-}
-main .right-content .landing .landing-title {
+main .right-content .section-title {
   display: flex;
   align-items: center;
 }
-main .right-content .landing .landing-title h2 {
+main .right-content .section-title h2 {
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin-right: 12px;
+}
+main .right-content .section-title a {
+  margin-left: auto;
+  text-decoration: underline;
+}
+main .right-content .landing {
+  padding: 40px;
 }
 main .right-content .landing .slider {
   position: relative;
@@ -323,30 +333,18 @@ main .right-content .landing .slider .slider-button-content .slider-button:hover
 main .right-content .landing .slider .slider-button-content .slider-button:hover svg path {
   stroke: #fff;
 }
-main .right-content .landing .item-heading {
-  display: flex;
-  align-items: baseline;
+main .right-content .landing .item-section {
   padding-top: 30px;
 }
-main .right-content .landing .item-heading h2 {
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-main .right-content .landing .item-heading a {
-  margin-left: auto;
-  text-decoration: underline;
-}
-main .right-content .landing .item-tab {
+main .right-content .landing .item-section .item-tab {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
-main .right-content .landing .item-tab ul.tab-list {
+main .right-content .landing .item-section .item-tab ul.tab-list {
   display: flex;
 }
-main .right-content .landing .item-tab ul.tab-list li {
+main .right-content .landing .item-section .item-tab ul.tab-list li {
   border-radius: 9px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 10px 20px;
@@ -355,23 +353,23 @@ main .right-content .landing .item-tab ul.tab-list li {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.4);
 }
-main .right-content .landing .item-tab ul.tab-list li.active, main .right-content .landing .item-tab ul.tab-list li:hover {
+main .right-content .landing .item-section .item-tab ul.tab-list li.active, main .right-content .landing .item-section .item-tab ul.tab-list li:hover {
   border-color: #000;
   color: #000;
 }
-main .right-content .landing .item-tab .sort-by {
+main .right-content .landing .item-section .item-tab .sort-by {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-main .right-content .landing .item-tab .sort-by .select-dropdown {
+main .right-content .landing .item-section .item-tab .sort-by .select-dropdown {
   background-color: rgba(217, 217, 217, 0.34);
   border-radius: 53px;
   margin-left: 10px;
   position: relative;
   width: auto;
 }
-main .right-content .landing .item-tab .sort-by .select-dropdown select {
+main .right-content .landing .item-section .item-tab .sort-by .select-dropdown select {
   padding: 10px 40px 10px 20px;
   border: none;
   background-color: transparent;
@@ -380,11 +378,11 @@ main .right-content .landing .item-tab .sort-by .select-dropdown select {
   appearance: none;
   width: 100%;
 }
-main .right-content .landing .item-tab .sort-by .select-dropdown select:active, main .right-content .landing .item-tab .sort-by .select-dropdown select:focus {
+main .right-content .landing .item-section .item-tab .sort-by .select-dropdown select:active, main .right-content .landing .item-section .item-tab .sort-by .select-dropdown select:focus {
   outline: none;
   box-shadow: none;
 }
-main .right-content .landing .item-tab .sort-by .select-dropdown::after {
+main .right-content .landing .item-section .item-tab .sort-by .select-dropdown::after {
   content: "▾";
   position: absolute;
   font-size: 12px;
@@ -399,7 +397,7 @@ main .right-content .landing .item-tab .sort-by .select-dropdown::after {
   align-items: center;
   justify-content: center;
 }
-main .right-content .landing .item-tab .sort-by .select-dropdown option {
+main .right-content .landing .item-section .item-tab .sort-by .select-dropdown option {
   width: 100%;
 }
 main .right-content .item-card-section {
@@ -417,17 +415,21 @@ main .right-content .item-card-section .card {
   display: grid;
   height: 90%;
   margin: auto 10px;
-  width: calc(2.3% - 20px);
+  width: calc(2.7% - 20px);
+  max-width: 322px;
   background-color: #fff;
+  padding: 10px 16px;
+  animation: fadeUp ease 1s;
+  -webkit-animation: fadeUp ease 1s;
+  -moz-animation: fadeUp ease 1s;
+  -o-animation: fadeUp ease 1s;
+  -ms-animation: fadeUp ease 1s;
 }
 main .right-content .item-card-section .card .card-image {
   width: 100%;
   height: 256px;
   margin: 0 auto;
-  margin-top: -40px;
-}
-main .right-content .item-card-section .card .card-content {
-  padding: 10px 16px;
+  margin-top: -50px;
 }
 main .right-content .item-card-section .card .card-content .brand-name {
   color: rgba(0, 0, 0, 0.39);
@@ -542,6 +544,17 @@ header .search input {
   line-height: normal;
 }
 
+/*=== FADE IN  ===*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 .menu-toggle {
   display: block;
   cursor: pointer;
@@ -552,4 +565,70 @@ header .search input {
   height: 5px;
   background-color: #555;
   margin: 6px 0;
+}
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/responsive.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@media screen and (min-width: 1900px) {
+  main aside {
+    min-width: 520px;
+  }
+  main aside .sidebar-header h1 {
+    font-size: 80px;
+  }
+  main aside .sidebar-header h1::after {
+    width: 110px;
+    height: 110px;
+    right: 105px;
+  }
+  main aside .filter-section .filter-title {
+    font-size: 32px;
+  }
+  main aside .filter-section .filter-title img {
+    width: 39px;
+    height: 21px;
+  }
+  main aside .filter-section a {
+    font-size: 20px;
+  }
+  main aside .filter-section .filter-option .filter-option-header .filter-sub-title {
+    font-size: 20px;
+  }
+  main header ul li {
+    padding: 0 50px;
+  }
+  main header ul li a {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  main header ul li a img {
+    width: 36px;
+    height: 36px;
+  }
+  main .right-content .section-title h2 {
+    font-size: 48px;
+  }
+  main .right-content .section-title a {
+    font-size: 20px;
+  }
+  main .right-content .landing .slider .image-slider .slider-item {
+    height: 417px;
+  }
+  main .right-content .landing .slider .image-slider .slider-item .slider-content {
+    padding-right: 324px;
+  }
+  main .right-content .landing .slider .image-slider .slider-item .slider-content .slider-title {
+    font-size: 48px;
+  }
+  main .right-content .item-section .item-tab ul.tab-list li {
+    font-size: 20px;
+  }
+  main .right-content .item-section .item-tab .sort-by {
+    font-size: 20px;
+  }
+  main .right-content .item-section .item-tab .sort-by .select-dropdown select {
+    font-size: 20px;
+  }
 }

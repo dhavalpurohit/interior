@@ -1,0 +1,117 @@
+$small: 576px;
+$medium: 768px;
+$large: 1200px;
+$xlarge: 1600px;
+$xxl: 1900px;
+
+
+main {
+    @media screen and (min-width: $xxl) {
+        aside {
+            min-width: 520px;
+
+            .sidebar-header {
+                h1 {
+                    font-size: 80px;
+
+                    &::after {
+                        width: 110px;
+                        height: 110px;
+                        right: 105px;
+                    }
+                }
+            }
+
+            .filter-section {
+                .filter-title {
+                    font-size: 32px;
+
+                    img {
+                        width: 39px;
+                        height: 21px;
+                    }
+                }
+
+                a {
+                    font-size: 20px;
+                }
+
+                .filter-option {
+                    .filter-option-header {
+                        .filter-sub-title {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        header {
+            ul {
+                li {
+                    padding: 0 50px;
+
+                    a {
+                        font-size: 36px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+
+                        img {
+                            width: 36px;
+                            height: 36px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-content {
+            .section-title {
+                h2 {
+                    font-size: 48px;
+                }
+
+                a {
+                    font-size: 20px;
+                }
+            }
+
+            .landing {
+                .slider {
+                    .image-slider {
+                        .slider-item {
+                            height: 417px;
+
+                            .slider-content {
+                                padding-right: 324px;
+
+                                .slider-title {
+                                    font-size: 48px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .item-section {
+                .item-tab {
+                    ul.tab-list {
+                        li {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .sort-by {
+                        font-size: 20px;
+
+                        .select-dropdown select {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

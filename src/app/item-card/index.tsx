@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-export default function Landing() {
+export default function ItemCard(items: any) {
     return (
         <div className="card">
-            <Image className="card-image" src='/chair.png' alt={'chair'} width={100} height={100} />
+            <Image className="card-image" src={items.items.image} alt={'chair'} width={100} height={100} />
             <div className='card-content'>
-                <div className='brand-name'>IKEA</div>
+                <div className='brand-name'>{items.items.brand_name}</div>
                 <div className='card-item-name'>
-                    <div>Muren Armchairs</div>
+                    <div>{items.items.item_name}</div>
                     <span>...</span>
                 </div>
                 <div className='rating'>
@@ -17,7 +17,7 @@ export default function Landing() {
 
                 </div>
                 <div className='price-cart'>
-                    <div className='price-cart-value'>$210.00</div>
+                    <div className='price-cart-value'>${items.items.price}</div>
                     <div className='shopping-bag'>
                         <Image src='/shopping-bag.svg' alt={'shopping-bag'} width={18} height={18} />
                     </div>

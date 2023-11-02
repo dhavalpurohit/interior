@@ -4,8 +4,8 @@ export default function Heading() {
     const tabs = ['All Product', 'Chair', 'Table', 'Sofa', 'FootStool', 'Office']
     const [activeTab, setActiveTab] = useState(0);
     return (
-        <div>
-            <div className="item-heading">
+        <div className="item-section">
+            <div className="section-title">
                 <h2>Best Seller</h2>
                 <a href="#">View All</a>
             </div>

@@ -1,17 +1,17 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Landing from './Landing'
 import Header from './header'
 import SideMenu from './side-menu'
 import './page.scss'
-
+import './responsive.scss'
+import './custom'
 
 export default function Home() {
   const [isMenuOpen, setMenuOpen] = useState(true);
   const toggleClass = () => {
     setMenuOpen(!isMenuOpen);
   }
-
   return (
     <main>
       <aside className={isMenuOpen ? 'aside-open' : 'aside-close'}>

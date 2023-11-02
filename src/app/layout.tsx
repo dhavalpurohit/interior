@@ -21,6 +21,10 @@ export default function RootLayout({
 
         {/* Abel font import */}
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet" />
+        <script
+          src="./custom.js"
+          type="text/javascript"></script>
+
       </head>
       <body className={inter.className}>{children}</body>
     </html>
