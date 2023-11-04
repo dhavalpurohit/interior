@@ -1,7 +1,12 @@
+import Image from 'next/image';
 import { useState } from "react";
-import Image from 'next/image'
-import Slider from './slider'
 import ItemCard from "../item-card";
+import Slider from './slider';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const tabs = ['All Product', 'Chair', 'Table', 'Sofa', 'FootStool', 'Office']
 const cartList =
@@ -57,18 +62,48 @@ export default function Landing() {
                     </div>
                 </div>
             </div>
-            <div className='item-card-section'>
+            <Swiper
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                loop={true}
+                breakpoints={{
+                    300: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                    1600: {
+                        slidesPerView: 4,
+                    },
+                    1900: {
+                        slidesPerView: 5,
+                    },
+                }}
+                slidesPerView={4}
+                spaceBetween={20}
+                freeMode={true}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Autoplay]}
+                className='item-card-section'>
                 {cartList.data.length > 0 ? (
                     cartList.data.map((obj: any, index: any) => {
                         if (activeCate === 'All Product' || activeCate === obj.category)
-                            return <ItemCard key={index} items={obj} />
+                            return <SwiperSlide key={index}><ItemCard key={index} items={obj} /></SwiperSlide>
                     }
                     )
                 ) : (
                     <div>No Item</div>
                 )}
 
-            </div>
+            </Swiper>
         </div>
     )
 }

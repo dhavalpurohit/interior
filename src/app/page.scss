@@ -322,9 +322,6 @@ main {
 
                 .image-slider {
                     margin-top: 30px;
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    grid-gap: 14px;
 
                     .slider-item {
                         padding: 30px;
@@ -334,6 +331,7 @@ main {
                         background-repeat: no-repeat;
                         height: 330px;
                         position: relative;
+                        width: calc(50% - 20px) !important;
 
                         .slider-content {
                             color: #fff;
@@ -391,6 +389,7 @@ main {
                     margin: auto;
                     display: flex;
                     align-items: center;
+                    z-index: 1;
 
                     .slider-button {
                         position: relative;
@@ -513,8 +512,7 @@ main {
         }
 
         .item-card-section {
-            display: flex;
-            width: 1000%;
+            width: calc(100vw - 300px);
             height: 100%;
             transition: all .5s;
             background-color: rgba(217, 217, 217, 0.50);
@@ -522,13 +520,13 @@ main {
             padding-top: 60px;
             overflow: hidden;
 
+            .swiper-slide {
+                min-width: 322px !important;
+            }
+
             .card {
                 border-radius: 24px;
-                display: grid;
-                height: 90%;
                 margin: auto 10px;
-                width: calc(2.7% - 20px);
-                max-width: 322px;
                 background-color: #fff;
                 padding: 10px 16px;
                 animation: fadeUp ease 1s;
@@ -680,6 +678,23 @@ header {
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+        }
+
+        .suggestion_box {
+            position: absolute;
+            top: 100%;
+            background: #fff;
+            width: 100%;
+            left: 0;
+            padding: 10px;
+            z-index: 9999;
+            border-radius: $common-border-radius;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+
+            span {
+                display: block;
+                margin: 10px 0;
+            }
         }
     }
 }

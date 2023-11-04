@@ -1,12 +1,11 @@
 'use client';
-import { useState, useEffect } from 'react';
-import Landing from './Landing'
-import Header from './header'
-import SideMenu from './side-menu'
-import './page.scss'
-import './responsive.scss'
-import './custom'
-
+import { useState } from 'react';
+import Landing from './Landing';
+import './custom';
+import Header from './header';
+import './page.scss';
+import './responsive.scss';
+import SideMenu from './side-menu';
 export default function Home() {
   const [isMenuOpen, setMenuOpen] = useState(true);
   const toggleClass = () => {

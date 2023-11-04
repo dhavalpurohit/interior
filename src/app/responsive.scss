@@ -125,7 +125,7 @@ main {
             position: absolute;
             left: 0;
             top: 0;
-            z-index: 1;
+            z-index: 5;
             height: 100%;
 
             .sidebar-header {
@@ -166,6 +166,10 @@ main {
                 h2 {
                     font-size: 1.5rem;
                 }
+            }
+
+            .item-card-section {
+                width: 100%;
             }
         }
     }
@@ -212,6 +216,10 @@ main {
                 .slider {
                     .image-slider {
                         grid-template-columns: repeat(1, 1fr);
+
+                        .slider-item {
+                            width: 100% !important;
+                        }
                     }
                 }
 
@@ -221,8 +229,8 @@ main {
                 }
             }
 
-            .item-card-section .card {
-                width: calc(5% - 20px);
+            .item-card-section {
+                width: 100%;
             }
         }
     }

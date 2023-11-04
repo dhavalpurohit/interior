@@ -24,9 +24,8 @@ export default function RootLayout({
         <script
           src="./custom.js"
           type="text/javascript"></script>
-
       </head>
       <body className={inter.className}>{children}</body>
-    </html>
+    </html >
   )
 }
