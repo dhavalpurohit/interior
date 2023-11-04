@@ -5,7 +5,8 @@ import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Slider() {
-    const swiperRef = useRef();
+    const initialRef: any = null;
+    const swiperRef = useRef(initialRef);
 
     const images = [
         {
@@ -147,14 +148,14 @@ export default function Slider() {
                 </div>
             </div > */}
             <div className="slider-button-content">
-                <div className="slider-button prev" onClick={() => swiperRef.current?.slidePrev()}>
+                <div className="slider-button prev" onClick={() => swiperRef.current.slidePrev()}>
                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11.2084H21.0702" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M11.0349 1L21.07 11.2083L11.0349 21.4167" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </div>
 
-                <div className="slider-button next" onClick={() => swiperRef.current?.slideNext()}>
+                <div className="slider-button next" onClick={() => swiperRef.current.slideNext()}>
                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 11.2084H21.0702" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M11.0349 1L21.07 11.2083L11.0349 21.4167" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
