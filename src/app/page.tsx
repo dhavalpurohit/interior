@@ -1,15 +1,15 @@
 'use client';
 import { useState } from 'react';
 import Landing from './Landing';
-import './custom';
 import Header from './header';
 import './page.scss';
 import './responsive.scss';
 import SideMenu from './side-menu';
+
 export default function Home() {
-  const [isMenuOpen, setMenuOpen] = useState(true);
+  const [isMenuOpen, setMenuOpen] = useState(true)
   const toggleClass = () => {
-    setMenuOpen(!isMenuOpen);
+    setMenuOpen(!isMenuOpen)
   }
   return (
     <main>
